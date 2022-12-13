@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family:Arial, Helvetica, sans-serif ;
+  padding: 10px;
+  background: #f1f1f1;
+}
+mark {
+  background-color: black;
+  color: white;
+  font-size:xx-large;
+  
+}
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template: 10% 3% 40% 100% 20% 20% 8% / repeat(2, 1fr);
+  gap: 0.5em;
+
+  grid-template-areas: 
+    "gridheader gridheader"
+    "gridtopnav gridtopnav"
+    "grid-about grid-experience"
+    "grid-skills grid-skills"
+    "grid-post grid-post"
+    "grid-follow grid-follow"
+    "grid-footer grid-footer";
+} 
+
+.gridheader {
+  padding: 20px;
+  text-align: center;
+  background: lightslategray;
+}
+
+.gridheader h1 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  color: lavender;
+}
+
+.gridtopnav {
+  background-color: black;
+  padding: 5px;
+  overflow-wrap: inherit;
+}
+
+.gridtopnav a {
+  float: left;
+  color: white;
+  padding: 5px; 
+  
+}
+
+.gridtopnav a:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+.grid-about {
+  align-items: center;
+  background-color: gray;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+  p1 {
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    font-style: italic;
+  }
+
+  .content {
+    background-color: none;
+    padding-left: 5px;
+  }
+
+.grid-experience {
+  background-color: gray;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.grid-skills {
+  background-color: lightseagreen;
+  height: 400px;
+  padding: 10px;
+  text-align: center;
+  display: grid;
+  grid-template: 8% 50% 50% / repeat(3, 1fr);
+
+  gap: 0.5em;
+
+  grid-template-areas: 
+  "grid-skills1 grid-skills1 grid-skills1"
+  "grid-skills2 grid-skills3 grid-skills4"
+  "grid-skills5 grid-skills6 grid-skills7";
+
+}
+/* Grid Skills Items */
+  .grid-skills1 {
+    background-color: black;
+    color: whitesmoke;
+  }
+  .grid-skills2 {
+    color: whitesmoke;
+  }
+  .grid-skills3 {
+    color: whitesmoke;
+  }
+  .grid-skills4 {
+   color: whitesmoke;
+  }
+  .grid-skills5 {
+    color: whitesmoke;
+  }
+  .grid-skills6 {
+    color: whitesmoke;
+  }
+  .grid-skills7 {
+    border-color: white;
+    color: whitesmoke;
+  }
+
+.grid-post {
+  background-color: gray;
+  padding: 20px;
+  margin-top: 20px;
+}
+  
+.grid-interests {
+  background-color: gray;
+  padding: 20px;
+  margin-top: 20px;
+}
+  
+.grid-footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 750px) {
+   .grid-container {  
+    grid-template: auto / repeat(2, 1fr); 
+    grid-template-areas: 
+    "gridheader gridheader"
+    "gridtopnav gridtopnav"
+    "grid-about grid-experience"
+    "grid-skills grid-skills"
+    "grid-post grid-post"
+    "grid-follow grid-follow"
+    "grid-footer grid-footer";
+        
+  }
+} 
+
+@media screen and (max-width: 700px) {
+   .grid-container {  
+    grid-template: auto / 1fr; 
+    grid-template-areas: 
+    "gridheader"
+    "gridtopnav"
+    "grid-about"
+    "grid-experience"
+    "grid-skills"
+    "grid-post"
+    "grid-follow"
+    "grid-footer";
+    float: none;
+    clear: both;
+    width: 100%;
+    
+  }
+
+}
+
+/* Grid Items */
+.grid1 {
+  grid-area: gridheader;
+}
+.grid2 {
+  grid-area: gridtopnav;
+}
+.grid3 {
+  grid-area: grid-about;
+}
+.grid4 {
+  grid-area: grid-experience;
+}
+.grid5 {
+  grid-area: grid-skills;
+}
+.grid6 {
+  grid-area: grid-post;
+}
+.grid7 {
+  grid-area: grid-follow;
+}
+.grid8 {
+  grid-area: grid-footer;
+}
+
+.grid-s1 {
+  grid-area: grid-skills1;
+}
+.grid-s2 {
+  grid-area: grid-skills2;
+}
+.grid-s3 {
+  grid-area: grid-skills3;
+}
+.grid-s4 {
+  grid-area: grid-skills4;
+}
+.grid-s5 {
+  grid-area: grid-skills5;
+}
+.grid-s6 {
+  grid-area: grid-skills6;
+}
+.grid-s7 {
+  grid-area: grid-skills7;
+}
